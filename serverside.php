@@ -35,8 +35,6 @@ add_action( 'init', 'my_block_plugin_register_block' );
 // Server-side rendering callback
 function my_block_plugin_render( $attributes ) {
     ob_start();
-    global $wpdb;
-    var_dump($wpdb);
     ?>
     <div class="my-block">
         <h2><?php echo esc_html( 'foobar' ); ?></h2>
